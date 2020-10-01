@@ -1,7 +1,7 @@
 Baguette_Size = ["15cm", "30cm"]
-Baguette_Bread = ["White", "Brown", "Seeded"]
-Baguette_Filling = ["Beef", "Chicken", "Cheese", "Egg", "Tuna", "Turkey"]
-Baguette_Salad = ["Lettuce", "Tomato", "Sweetcorn", "Cucumber", "Peppers"]
+Baguette_Bread = ["white", "brown", "seeded"]
+Baguette_Filling = ["beef", "chicken", "cheese", "egg", "tuna", "turkey"]
+Baguette_Salad = ["lettuce", "tomato", "sweetcorn", "cucumber", "peppers"]
 
 customer_choice = {
     "Size": None,
@@ -22,12 +22,12 @@ while True:
     print("")
     size = input()
 
-    if size in Baguette_Size:
+    if size.lower() in Baguette_Size:
         print(f"Ok you have selected a {size} baguette\n")
         customer_choice.update({"Size": size})
         break
     else:
-        print("Please select a valid option")
+        print("Please select a valid option out of the following:")
 
 print("Please now select you bread type out of the following:")
 #Finds the customers bread
@@ -39,11 +39,11 @@ while True:
     print("")
     bread = input()
 
-    if bread in Baguette_Bread:
+    if bread.lower() in Baguette_Bread:
         print(f"Ok you have selected a {bread} baguette\n")
         customer_choice.update({"BreadType": bread})
         break
     else:
-        print("Please select a valid option")
+        print("Please select a valid option out of the following:")
 
 print(customer_choice)
